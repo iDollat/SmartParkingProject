@@ -67,3 +67,8 @@ http://localhost:5173/
 ## Link do filmu z prezentacją działania aplikacji
 
 [Youtube](https://youtu.be/X8_hpkz_-mw)
+
+## Autorzy
+
+[iDollat](https://github.com/iDollat)
+[dchmurek](https://github.com/dchmurek) 
