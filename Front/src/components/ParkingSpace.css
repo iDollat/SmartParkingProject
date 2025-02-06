@@ -1,0 +1,7 @@
+.parking-space {
+    cursor: pointer;
+  }
+  
+  .parking-space:hover {
+    opacity: 0.8;
+  }

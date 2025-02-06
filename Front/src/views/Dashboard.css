@@ -1,0 +1,123 @@
+.dashboard {
+    position: relative;
+    height: 93vh;
+    overflow: hidden;
+  }
+  
+  .title {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translate(-50%, 20px); /* Dodaj początkowe przesunięcie w dół */
+    font-size: 2.5rem;
+    background: linear-gradient(90deg, #0d6efd, #c28454);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    text-align: center;
+    z-index: 2;
+    opacity: 0; /* Początkowa przezroczystość */
+    animation: fadeInUp 1.5s ease-out forwards; /* Animacja pojawiania się */
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, 20px); /* Początkowa pozycja */
+    }
+    100% {
+      opacity: 1;
+      transform: translate(-50%, 0); /* Końcowa pozycja */
+    }
+  }
+  
+  .background-image {
+    background-image: url("../img/parking.png"); /* Ścieżka do twojego zdjęcia */
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    position: relative; /* Umożliwia pozycjonowanie fragmentów w odniesieniu do tego kontenera */
+    z-index: 1;
+  }
+  
+  .parking-fragment {
+    position: absolute; /* Pozwala na precyzyjne pozycjonowanie fragmentów */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  @keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  /* Animacja podskakiwania na hover */
+  .parking-fragment:hover {
+    animation: bounce 0.6s ease-in-out;
+  }
+  
+  /* Podświetlenie fragmentu */
+  .parking-fragment.highlight {
+    background-color: rgba(13, 110, 253, 0.5);
+  }
+  
+  /* Równoległoboki przy użyciu clip-path */
+  .parking-fragment:nth-child(1) {
+    bottom: 40%;
+    left: 25%;
+    width: 30%;
+    height: 15%;
+    clip-path: polygon(
+      80% 0%,
+      40% 0%,
+      0% 100%,
+      75% 100%
+    ); /* Kształt równoległoboku */
+  }
+  
+  .parking-fragment:nth-child(2) {
+    bottom: 40%;
+    right: 25%;
+    width: 30%;
+    height: 15%;
+    clip-path: polygon(20% 0%, 55% 0%, 100% 100%, 23% 100%);
+  }
+  
+  .parking-fragment:nth-child(3) {
+    bottom: 10%;
+    left: 0%;
+    width: 50%;
+    height: 30%;
+    clip-path: polygon(
+      95% 0%,
+      50% 0%,
+      0% 100%,
+      92% 100%
+    ); /* Kształt równoległoboku */
+  }
+  
+  .parking-fragment:nth-child(4) {
+    bottom: 10%;
+    right: 0%;
+    width: 50%;
+    height: 30%;
+    clip-path: polygon(
+      4% 0%,
+      50% 0%,
+      100% 100%,
+      6% 100%
+    ); /* Kształt równoległoboku */
+  }

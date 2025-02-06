@@ -1,0 +1,105 @@
+/* Stylizacja kontenera parkingu */
+.parking-lot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 93vh;
+  margin: 0 auto;
+  background-image: url("../img/parking.png"); /* Tło */
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Nagłówek */
+.header {
+  display: flex;
+  align-items: center; /* Wyrównanie elementów w pionie */
+  justify-content: space-between; /* Rozkłada elementy równomiernie */
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 20px;
+}
+
+/* Tytuł */
+.header h2 {
+  flex-grow: 1; /* Zajmuje pozostałą przestrzeń */
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-align: center; /* Wyśrodkowanie tekstu */
+  margin: 0;
+  background: linear-gradient(90deg, #0d6efd, #c28454);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Przyciski */
+.back-button {
+  background-color: #007bff;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-right: auto; /* Przyciąga przycisk do lewej */
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+}
+
+/* Stylizacja rzędów parkingowych */
+.parking-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.road {
+  width: 100%;
+  height: 30px;
+  margin: 10px 0;
+  background-color: rgba(85, 85, 85, 0.5);
+}
+
+/* Stylizacja pojedynczego miejsca parkingowego */
+.parking-space {
+  width: 80px;
+  height: 100px;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  padding: 10px;
+}
+
+.parking-space:hover {
+  transform: scale(1.05);
+}
+
+.available {
+  background-color: #28a745;
+  color: white;
+}
+
+.occupied {
+  background-color: #dc3545;
+  color: white;
+}
